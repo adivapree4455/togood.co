@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans';
+}
+
+*::selection{
+    color: #fff;
+    background: #000;
+
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+
+
+#cursor{
+    height: 170px;
+    width: 170px;
+    background-color: rgb(238, 182, 220);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%) scale(0);
+    /* scale: 0; */
+}
+
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+
+#nav-part1{
+    /* background-color: red; */
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg{
+    display: block;
+}
+
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin-right: 40px;
+    font-weight: 100;
+}
+
+#links{
+    padding: 10px;
+}
+
+#icons{
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #fff;
+    
+}
+
+/* PAGE ONE START HERE */
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 3vw 5vw;
+    padding-bottom: 1vw;
+    
+}
+
+#page1 h1{
+    font-size: 11vw;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -10px;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    /* background: grey; */
+    margin-top: 4vw;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    padding: 3vw 2.5vw;
+    background: black;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: futura;
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+/* PAGE TWO START HERE */
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page2 .elemc{
+    height: 100%;
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elemc img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+
+#page2 .elemc .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: palegoldenrod;
+
+}
+
+
+/* PAGE THREE START HERE */
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    /* background: greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2rem;
+    position: relative;
+
+}
+
+#page3 .display-left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    gap: 50px;
+    
+    
+   
+   
+}
+
+#page3 .display-left p{
+    font-size: 1.3vw;
+
+
+}
+
+
+.child{
+    height: 54vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
+}
+
+
+#page0{
+    width: 100%;
+    min-height: 50vh;
+   
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    gap: 50px;
+}
+
+#page0 .content h1{
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 4.3vw;
+    padding: 5vw 3vw;
+}
+
+
+#page0 .content p{
+    font-size: 1.1vw;
+    line-height: 1.5vw;
+    padding: 5vw 3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @MEDIAQUERY START HERE */
+
+
+@media (max-width:600px){
+    #nav{
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 25px;
+    
+    }
+    
+    #nav-part1{
+        /* background-color: red; */
+        height: 62px;
+        overflow: hidden;
+    }
+    
+    
+    #nav #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    #nav-part2 #links a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 40px;
+    }
+    
+    #nav-part2 #icons i{
+        font-size: 18px;
+        margin-right: 40px;
+        font-weight: 100;
+    }
+    
+    #links{
+        padding: 10px;
+        display: none;
+    }
+    
+    #icons{
+        padding: 10px 30px;
+        border-radius: 50px;
+        background-color: #fff;
+        
+    }
+    
+    #page1 h1{
+        font-size: 10vw;
+        font-family: futura;
+        line-height: 10vw;
+        letter-spacing: -3px;
+        padding-top: 0.3rem;
+        display: none;
+        
+       
+
+    }
+
+    #page1{
+        min-height: 50%;
+        width: 100%;
+        padding-top: 25vw;
+        padding: 0 3vw;
+        padding-bottom: 25vh;
+        
+    }
+  
+
+    #video-container{
+        height: 45vh;
+        width: 100%;
+        margin-top: 3vw;
+    }
+    
+    #video-container #play{
+        padding: 9.5vw 7.2vw;
+        font-size: 2vw;
+        position: absolute;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        padding: 5vw 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    
+    #page2 .elemc{
+        height: 80vh;
+        width: 85%;
+        overflow: hidden;
+        margin-bottom: 3vw;
+    }
+
+   
+    
+    .content{
+        display: block;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    #page0 .content h1{
+        text-align: center;
+        font-size: 4vw;
+        word-spacing: 1vw;
+        letter-spacing: 0.1vw;
+    }
+
+    #page0 .content p{
+     align-items: center;
+     text-align: center;
+     font-size: 2vw;
+     line-height: 2vw;
+     font-weight: 400;
+    }
+    
+   
+    
+}
+
